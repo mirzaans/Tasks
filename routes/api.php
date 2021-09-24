@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\http\Controllers\ProjectController;
 
 
-Route::get->group(function(){
+Route::middleware()->group(function(){
 Route::get('/authors',[ProjectController::class,'authors_list']);
 Route::get('/authors/{author}',[ProjectController::class,'author_show']);
 

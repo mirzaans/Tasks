@@ -6,7 +6,7 @@ use App\Http\Controllers\ProjectController;
 
 
 
-Route::middleware()->group(function(){
+Route::middleware(['auth'])->group(function(){
     
 Route::get('/dashboard', [ProjectController::class,'index']);
 
